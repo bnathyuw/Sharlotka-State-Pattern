@@ -44,6 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ReadyToServeTests.cs" />
+    <Compile Include="ReadyToDustWithCinnamonTests.cs" />
+    <Compile Include="ReadyToDustWithSugarTests.cs" />
+    <Compile Include="ReadyToTurnOutTests.cs" />
+    <Compile Include="NotReadyToTurnOutTests.cs" />
+    <Compile Include="ReadyToAddBatterStateTests.cs" />
+    <Compile Include="ReadyToBakeStateTests.cs" />
+    <Compile Include="ReadyToAddApplesStateTests.cs" />
     <Compile Include="SharlotkaTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

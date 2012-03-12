@@ -41,8 +41,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ISharlotkaState.cs" />
+    <Compile Include="NotReadyToTurnOutState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadyToAddApplesState.cs" />
+    <Compile Include="ReadyToAddBatterState.cs" />
+    <Compile Include="ReadyToBakeState.cs" />
+    <Compile Include="ReadyToDustWithCinnamonState.cs" />
+    <Compile Include="ReadyToDustWithSugarState.cs" />
+    <Compile Include="ReadyToServeState.cs" />
+    <Compile Include="ReadyToTurnOutState.cs" />
     <Compile Include="Sharlotka.cs" />
+    <Compile Include="WrongStateException.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
