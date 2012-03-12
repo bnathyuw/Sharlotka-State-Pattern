@@ -14,11 +14,11 @@ namespace Classic.Implementation
 		}
 
 		public bool IsReady {
-			get { throw new WrongStateException(); }
+			get { return true; }
 		}
 
 		public void TurnOut() {
-			throw new WrongStateException();
+			
 		}
 
 		public void DustWithSugar() {

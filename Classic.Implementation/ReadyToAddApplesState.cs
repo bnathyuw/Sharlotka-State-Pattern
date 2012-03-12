@@ -2,7 +2,7 @@ namespace Classic.Implementation
 {
 	public class ReadyToAddApplesState : ISharlotkaState {
 		public void AddApples() {
-			throw new WrongStateException();
+			
 		}
 
 		public void AddBatter() {

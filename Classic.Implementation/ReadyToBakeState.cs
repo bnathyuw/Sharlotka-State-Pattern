@@ -10,7 +10,7 @@ namespace Classic.Implementation
 		}
 
 		public void Bake() {
-			throw new WrongStateException();
+			
 		}
 
 		public bool IsReady {

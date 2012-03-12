@@ -30,7 +30,7 @@ namespace Classic.Implementation
 		}
 
 		public void Serve() {
-			throw new WrongStateException();
+			
 		}
 	}
 }

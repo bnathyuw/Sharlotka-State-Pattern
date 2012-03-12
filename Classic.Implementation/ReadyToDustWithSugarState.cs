@@ -22,7 +22,7 @@ namespace Classic.Implementation
 		}
 
 		public void DustWithSugar() {
-			throw new WrongStateException();
+			
 		}
 
 		public void DustWithCinnamon() {

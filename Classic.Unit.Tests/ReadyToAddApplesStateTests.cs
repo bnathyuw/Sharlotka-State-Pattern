@@ -15,8 +15,8 @@ namespace Classic.Unit.Tests
 		}
 
 		[Test]
-		public void AddApples_throws_WrongStateException() {
-			Assert.Throws<WrongStateException>(() => _state.AddApples());
+		public void Can_call_AddApples() {
+			_state.AddApples();
 		}
 
 		[Test]

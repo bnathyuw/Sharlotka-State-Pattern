@@ -50,8 +50,8 @@ namespace Classic.Unit.Tests
 		}
 
 		[Test]
-		public void Serve_throws_WrongStateException() {
-			Assert.Throws<WrongStateException>(() => _state.Serve());
+		public void Can_call_Serve() {
+			_state.Serve();
 		}
 	}
 }

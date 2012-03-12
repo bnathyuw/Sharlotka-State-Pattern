@@ -40,8 +40,8 @@ namespace Classic.Unit.Tests
 		}
 
 		[Test]
-		public void DustWithSugar_throws_WrongStateException() {
-			Assert.Throws<WrongStateException>(() => _state.DustWithSugar());
+		public void Can_call_DustWithSugar() {
+			_state.DustWithSugar();
 		}
 
 		[Test]

@@ -14,7 +14,7 @@ namespace Classic.Implementation
 		}
 
 		public bool IsReady {
-			get { throw new WrongStateException(); }
+			get { return false; }
 		}
 
 		public void TurnOut() {

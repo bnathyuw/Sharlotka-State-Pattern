@@ -26,7 +26,7 @@ namespace Classic.Implementation
 		}
 
 		public void DustWithCinnamon() {
-			throw new WrongStateException();
+			
 		}
 
 		public void Serve() {

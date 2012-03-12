@@ -20,8 +20,8 @@ namespace Classic.Unit.Tests
 		}
 
 		[Test]
-		public void AddBatter_throws_WrongStateException() {
-			Assert.Throws<WrongStateException>(() => _state.AddBatter());
+		public void Can_call_AddBatter() {
+			_state.AddBatter();
 		}
 
 		[Test]

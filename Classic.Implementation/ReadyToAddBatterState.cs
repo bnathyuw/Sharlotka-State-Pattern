@@ -6,7 +6,7 @@ namespace Classic.Implementation
 		}
 
 		public void AddBatter() {
-			throw new WrongStateException();
+			
 		}
 
 		public void Bake() {

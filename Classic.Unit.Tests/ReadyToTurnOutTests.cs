@@ -7,11 +7,11 @@ namespace Classic.Unit.Tests
 	[TestFixture]
 	public class ReadyToTurnOutTests
 	{
-		private ReadyToAddApplesState _state;
+		private ReadyToTurnOutState _state;
 
 		[SetUp]
 		public void SetUp() {
-			_state = new ReadyToAddApplesState();
+			_state = new ReadyToTurnOutState();
 		}
 
 		[Test]
@@ -30,13 +30,15 @@ namespace Classic.Unit.Tests
 		}
 
 		[Test]
-		public void IsReady_throws_WrongStateException() {
-			Assert.Throws<WrongStateException>(() => { var isReady = _state.IsReady; });
+		public void IsReady_returns_true() {
+			var isReady = _state.IsReady;
+
+			Assert.That(isReady, Is.True);
 		}
 
 		[Test]
-		public void TurnOut_throws_WrongStateException() {
-			Assert.Throws<WrongStateException>(() => _state.TurnOut());
+		public void Can_call_TurnOut() {
+			_state.TurnOut();
 		}
 
 		[Test]

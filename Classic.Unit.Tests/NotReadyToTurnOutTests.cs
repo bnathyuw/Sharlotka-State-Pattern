@@ -30,8 +30,9 @@ namespace Classic.Unit.Tests
 		}
 
 		[Test]
-		public void IsReady_throws_WrongStateException() {
-			Assert.Throws<WrongStateException>(() => { var isReady = _state.IsReady; });
+		public void IsReady_returns_false() {
+			var isReady = _state.IsReady;
+			Assert.That(isReady, Is.False);
 		}
 
 		[Test]

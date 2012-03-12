@@ -45,8 +45,8 @@ namespace Classic.Unit.Tests
 		}
 
 		[Test]
-		public void DustWithCinnamon_throws_WrongStateException() {
-			Assert.Throws<WrongStateException>(() => _state.DustWithCinnamon());
+		public void Can_call_DustWithCinnamon() {
+			_state.DustWithCinnamon();
 		}
 
 		[Test]

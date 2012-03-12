@@ -25,8 +25,8 @@ namespace Classic.Unit.Tests
 		}
 
 		[Test]
-		public void Bake_throws_WrongStateException() {
-			Assert.Throws<WrongStateException>(() => _state.Bake());
+		public void Can_call_Bake() {
+			_state.Bake();
 		}
 
 		[Test]
