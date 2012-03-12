@@ -38,8 +38,8 @@ namespace Classic.Unit.Tests
 		}
 
 		[Test]
-		public void IsRead_calls_state() {
-			var isReady = _sharlotka.IsReady;
+		public void IsReady_calls_state() {
+			_sharlotka.GetIsReady();
 
 			_sharlotkaState.AssertWasCalled(ss => ss.GetIsReady(_sharlotka));
 		}

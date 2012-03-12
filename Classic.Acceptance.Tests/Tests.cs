@@ -14,7 +14,7 @@ namespace Classic.Acceptance.Tests
 			sharlotka.AddBatter();
 			do {
 				sharlotka.Bake();
-			} while (!sharlotka.IsReady); 
+			} while (!sharlotka.GetIsReady()); 
 			sharlotka.TurnOut();
 			sharlotka.DustWithSugar();
 			sharlotka.DustWithCinnamon();

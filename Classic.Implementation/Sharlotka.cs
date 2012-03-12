@@ -20,8 +20,8 @@
 			_sharlotkaState.Bake(this);
 		}
 
-		public bool IsReady {
-			get { return _sharlotkaState.GetIsReady(this); }
+		public bool GetIsReady() {
+			return _sharlotkaState.GetIsReady(this);
 		}
 
 		public void TurnOut() {

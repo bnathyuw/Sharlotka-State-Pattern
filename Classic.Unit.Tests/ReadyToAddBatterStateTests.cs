@@ -1,5 +1,4 @@
-﻿using System;
-using Classic.Implementation;
+﻿using Classic.Implementation;
 using NUnit.Framework;
 using Rhino.Mocks;
 
@@ -43,7 +42,7 @@ namespace Classic.Unit.Tests
 
 		[Test]
 		public void IsReady_throws_WrongStateException() {
-			Assert.Throws<WrongStateException>(() => { var isReady = _state.GetIsReady(_sharlotka); });
+			Assert.Throws<WrongStateException>(() => _state.GetIsReady(_sharlotka));
 		}
 
 		[Test]

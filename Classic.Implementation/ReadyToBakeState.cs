@@ -2,7 +2,7 @@ namespace Classic.Implementation
 {
 	public class ReadyToBakeState : ISharlotkaState {
 		private readonly ISharlotkaState _successor;
-		private int bakeCount;
+		private int _bakeCount;
 		public ReadyToBakeState(ISharlotkaState successor) {
 			_successor = successor;
 		}
@@ -16,8 +16,8 @@ namespace Classic.Implementation
 		}
 
 		public void Bake(IHasState<ISharlotkaState> sharlotka) {
-			bakeCount++;
-			if (bakeCount >= 5) {
+			_bakeCount++;
+			if (_bakeCount >= 5) {
 				sharlotka.State = _successor;
 			}
 		}

@@ -1,5 +1,4 @@
-﻿using System;
-using Classic.Implementation;
+﻿using Classic.Implementation;
 using NUnit.Framework;
 using Rhino.Mocks;
 
