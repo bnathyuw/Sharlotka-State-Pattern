@@ -1,6 +1,7 @@
 ﻿using System;
 using Classic.Implementation;
 using NUnit.Framework;
+using Rhino.Mocks;
 
 namespace Classic.Unit.Tests
 {
@@ -8,10 +9,14 @@ namespace Classic.Unit.Tests
 	public class ReadyToDustWithCinnamonTests
 	{
 		private ReadyToDustWithCinnamonState _state;
+		private IHasState<ISharlotkaState> _sharlotka;
+		private ISharlotkaState _successor;
 
 		[SetUp]
 		public void SetUp() {
-			_state = new ReadyToDustWithCinnamonState();
+			_sharlotka = MockRepository.GenerateStub<IHasState<ISharlotkaState>>();
+			_successor = MockRepository.GenerateStub<ISharlotkaState>();
+			_state = new ReadyToDustWithCinnamonState(_sharlotka, _successor);
 		}
 
 		[Test]
@@ -47,6 +52,14 @@ namespace Classic.Unit.Tests
 		[Test]
 		public void Can_call_DustWithCinnamon() {
 			_state.DustWithCinnamon();
+		}
+
+		[Test]
+		public void DustWithCinnamon_sets_state_to_successor() {
+			_state.DustWithCinnamon();
+
+			_sharlotka.AssertWasCalled(s => s.State = _successor);
+
 		}
 
 		[Test]

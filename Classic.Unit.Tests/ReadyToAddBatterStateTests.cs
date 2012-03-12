@@ -1,6 +1,7 @@
 ﻿using System;
 using Classic.Implementation;
 using NUnit.Framework;
+using Rhino.Mocks;
 
 namespace Classic.Unit.Tests
 {
@@ -8,10 +9,14 @@ namespace Classic.Unit.Tests
 	public class ReadyToAddBatterStateTests
 	{
 		private ReadyToAddBatterState _state;
+		private IHasState<ISharlotkaState> _sharlotka;
+		private ISharlotkaState _successor;
 
 		[SetUp]
 		public void SetUp() {
-			_state = new ReadyToAddBatterState();
+			_sharlotka = MockRepository.GenerateStub<IHasState<ISharlotkaState>>();
+			_successor = MockRepository.GenerateStub<ISharlotkaState>();
+			_state = new ReadyToAddBatterState(_sharlotka, _successor);
 		}
 
 		[Test]
@@ -22,6 +27,13 @@ namespace Classic.Unit.Tests
 		[Test]
 		public void Can_call_AddBatter() {
 			_state.AddBatter();
+		}
+
+		[Test]
+		public void AddBatter_sets_state_to_successor() {
+			_state.AddBatter();
+
+			_sharlotka.AssertWasCalled(s => s.State = _successor);
 		}
 
 		[Test]

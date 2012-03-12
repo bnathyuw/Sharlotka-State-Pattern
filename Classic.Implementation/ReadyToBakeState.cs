@@ -1,6 +1,14 @@
 namespace Classic.Implementation
 {
 	public class ReadyToBakeState : ISharlotkaState {
+		private readonly IHasState<ISharlotkaState> _sharlotka;
+		private readonly ISharlotkaState _successor;
+
+		public ReadyToBakeState(IHasState<ISharlotkaState> sharlotka, ISharlotkaState successor) {
+			_sharlotka = sharlotka;
+			_successor = successor;
+		}
+
 		public void AddApples() {
 			throw new WrongStateException();
 		}
@@ -10,7 +18,7 @@ namespace Classic.Implementation
 		}
 
 		public void Bake() {
-			
+			_sharlotka.State = _successor;
 		}
 
 		public bool IsReady {

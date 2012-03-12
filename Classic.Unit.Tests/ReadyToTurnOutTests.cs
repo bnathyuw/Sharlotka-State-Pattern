@@ -1,6 +1,7 @@
 ﻿using System;
 using Classic.Implementation;
 using NUnit.Framework;
+using Rhino.Mocks;
 
 namespace Classic.Unit.Tests
 {
@@ -8,10 +9,14 @@ namespace Classic.Unit.Tests
 	public class ReadyToTurnOutTests
 	{
 		private ReadyToTurnOutState _state;
+		private IHasState<ISharlotkaState> _sharlotka;
+		private ISharlotkaState _successor;
 
 		[SetUp]
 		public void SetUp() {
-			_state = new ReadyToTurnOutState();
+			_sharlotka = MockRepository.GenerateStub<IHasState<ISharlotkaState>>();
+			_successor = MockRepository.GenerateStub<ISharlotkaState>();
+			_state = new ReadyToTurnOutState(_sharlotka, _successor);
 		}
 
 		[Test]
@@ -39,6 +44,13 @@ namespace Classic.Unit.Tests
 		[Test]
 		public void Can_call_TurnOut() {
 			_state.TurnOut();
+		}
+
+		[Test]
+		public void TurnOut_sets_state_to_successor() {
+			_state.TurnOut();
+
+			_sharlotka.AssertWasCalled(s => s.State = _successor);
 		}
 
 		[Test]

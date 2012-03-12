@@ -1,6 +1,12 @@
 namespace Classic.Implementation
 {
 	public class ReadyToServeState : ISharlotkaState {
+		private readonly IHasState<ISharlotkaState> _sharlotka;
+
+		public ReadyToServeState(IHasState<ISharlotkaState> sharlotka) {
+			_sharlotka = sharlotka;
+		}
+
 		public void AddApples() {
 			throw new WrongStateException();
 		}

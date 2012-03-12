@@ -1,6 +1,7 @@
 ﻿using System;
 using Classic.Implementation;
 using NUnit.Framework;
+using Rhino.Mocks;
 
 namespace Classic.Unit.Tests
 {
@@ -8,10 +9,14 @@ namespace Classic.Unit.Tests
 	public class NotReadyToTurnOutTests
 	{
 		private NotReadyToTurnOutState _state;
+		private IHasState<ISharlotkaState> _sharlotka;
+		private ISharlotkaState _successor;
 
 		[SetUp]
 		public void SetUp() {
-			_state = new NotReadyToTurnOutState();
+			_sharlotka = MockRepository.GenerateStub<IHasState<ISharlotkaState>>();
+			_successor = MockRepository.GenerateStub<ISharlotkaState>();
+			_state = new NotReadyToTurnOutState(_sharlotka, _successor);
 		}
 
 		[Test]
@@ -33,6 +38,20 @@ namespace Classic.Unit.Tests
 		public void IsReady_returns_false() {
 			var isReady = _state.IsReady;
 			Assert.That(isReady, Is.False);
+		}
+
+		[Test]
+		public void IsReady_sets_state_to_successor_after_fifth_call() {
+			var isReady = _state.IsReady;
+			_sharlotka.AssertWasNotCalled(s => s.State = _successor);
+			isReady = _state.IsReady;
+			_sharlotka.AssertWasNotCalled(s => s.State = _successor);
+			isReady = _state.IsReady;
+			_sharlotka.AssertWasNotCalled(s => s.State = _successor);
+			isReady = _state.IsReady;
+			_sharlotka.AssertWasNotCalled(s => s.State = _successor);
+			isReady = _state.IsReady;
+			_sharlotka.AssertWasCalled(s => s.State = _successor);
 		}
 
 		[Test]

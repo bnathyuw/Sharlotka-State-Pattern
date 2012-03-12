@@ -1,6 +1,15 @@
 namespace Classic.Implementation
 {
 	public class NotReadyToTurnOutState : ISharlotkaState {
+		private readonly IHasState<ISharlotkaState> _sharlotka;
+		private readonly ISharlotkaState _successor;
+		private int _callCount;
+
+		public NotReadyToTurnOutState(IHasState<ISharlotkaState> sharlotka, ISharlotkaState successor) {
+			_sharlotka = sharlotka;
+			_successor = successor;
+		}
+
 		public void AddApples() {
 			throw new WrongStateException();
 		}
@@ -14,7 +23,13 @@ namespace Classic.Implementation
 		}
 
 		public bool IsReady {
-			get { return false; }
+			get {
+				_callCount++;
+				if (_callCount == 5) {
+					_sharlotka.State = _successor;
+				}
+				return false;
+			}
 		}
 
 		public void TurnOut() {

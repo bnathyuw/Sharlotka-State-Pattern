@@ -1,6 +1,7 @@
 ﻿using System;
 using Classic.Implementation;
 using NUnit.Framework;
+using Rhino.Mocks;
 
 namespace Classic.Unit.Tests
 {
@@ -8,10 +9,12 @@ namespace Classic.Unit.Tests
 	public class ReadyToServeTests
 	{
 		private ReadyToServeState _state;
+		private IHasState<ISharlotkaState> _sharlotka;
 
 		[SetUp]
 		public void SetUp() {
-			_state = new ReadyToServeState();
+			_sharlotka = MockRepository.GenerateStub<IHasState<ISharlotkaState>>();
+			_state = new ReadyToServeState(_sharlotka);
 		}
 
 		[Test]

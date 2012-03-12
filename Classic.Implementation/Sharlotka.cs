@@ -1,8 +1,8 @@
 ﻿namespace Classic.Implementation
 {
-	public class Sharlotka
+	public class Sharlotka : IHasState<ISharlotkaState>
 	{
-		private readonly ISharlotkaState _sharlotkaState;
+		private ISharlotkaState _sharlotkaState;
 
 		public Sharlotka(ISharlotkaState sharlotkaState) {
 			_sharlotkaState = sharlotkaState;
@@ -38,6 +38,10 @@
 
 		public void Serve() {
 			_sharlotkaState.Serve();
+		}
+
+		public ISharlotkaState State {
+			set { _sharlotkaState = value; }
 		}
 	}
 }

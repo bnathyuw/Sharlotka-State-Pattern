@@ -1,8 +1,16 @@
 namespace Classic.Implementation
 {
 	public class ReadyToAddApplesState : ISharlotkaState {
+		private readonly IHasState<ISharlotkaState> _sharlotka;
+		private readonly ISharlotkaState _successor;
+
+		public ReadyToAddApplesState(IHasState<ISharlotkaState> sharlotka, ISharlotkaState successor) {
+			_sharlotka = sharlotka;
+			_successor = successor;
+		}
+
 		public void AddApples() {
-			
+			_sharlotka.State = _successor;
 		}
 
 		public void AddBatter() {
