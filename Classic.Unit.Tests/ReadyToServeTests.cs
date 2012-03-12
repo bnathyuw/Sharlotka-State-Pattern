@@ -14,47 +14,47 @@ namespace Classic.Unit.Tests
 		[SetUp]
 		public void SetUp() {
 			_sharlotka = MockRepository.GenerateStub<IHasState<ISharlotkaState>>();
-			_state = new ReadyToServeState(_sharlotka);
+			_state = new ReadyToServeState();
 		}
 
 		[Test]
 		public void AddApples_throws_WrongStateException() {
-			Assert.Throws<WrongStateException>(() => _state.AddApples());
+			Assert.Throws<WrongStateException>(() => _state.AddApples(_sharlotka));
 		}
 
 		[Test]
 		public void AddBatter_throws_WrongStateException() {
-			Assert.Throws<WrongStateException>(() => _state.AddBatter());
+			Assert.Throws<WrongStateException>(() => _state.AddBatter(_sharlotka));
 		}
 
 		[Test]
 		public void Bake_throws_WrongStateException() {
-			Assert.Throws<WrongStateException>(() => _state.Bake());
+			Assert.Throws<WrongStateException>(() => _state.Bake(_sharlotka));
 		}
 
 		[Test]
 		public void IsReady_throws_WrongStateException() {
-			Assert.Throws<WrongStateException>(() => { var isReady = _state.IsReady; });
+			Assert.Throws<WrongStateException>(() => { var isReady = _state.GetIsReady(_sharlotka); });
 		}
 
 		[Test]
 		public void TurnOut_throws_WrongStateException() {
-			Assert.Throws<WrongStateException>(() => _state.TurnOut());
+			Assert.Throws<WrongStateException>(() => _state.TurnOut(_sharlotka));
 		}
 
 		[Test]
 		public void DustWithSugar_throws_WrongStateException() {
-			Assert.Throws<WrongStateException>(() => _state.DustWithSugar());
+			Assert.Throws<WrongStateException>(() => _state.DustWithSugar(_sharlotka));
 		}
 
 		[Test]
 		public void DustWithCinnamon_throws_WrongStateException() {
-			Assert.Throws<WrongStateException>(() => _state.DustWithCinnamon());
+			Assert.Throws<WrongStateException>(() => _state.DustWithCinnamon(_sharlotka));
 		}
 
 		[Test]
 		public void Can_call_Serve() {
-			_state.Serve();
+			_state.Serve(_sharlotka);
 		}
 	}
 }

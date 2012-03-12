@@ -46,7 +46,6 @@
     <Compile Include="DependencyResolver.cs" />
     <Compile Include="IHasState.cs" />
     <Compile Include="ISharlotkaState.cs" />
-    <Compile Include="NotReadyToTurnOutState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReadyToAddApplesState.cs" />
     <Compile Include="ReadyToAddBatterState.cs" />

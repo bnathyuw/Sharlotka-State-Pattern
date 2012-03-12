@@ -8,13 +8,13 @@ namespace Classic.Acceptance.Tests
 	{
 		[Test]
 		public void Happy_path() {
-			var sharlotka = new Sharlotka(null);
+			var container = DependencyResolver.Container;
+			var sharlotka = container.GetInstance<Sharlotka>();
 			sharlotka.AddApples();
 			sharlotka.AddBatter();
-			sharlotka.Bake();
-			while (!sharlotka.IsReady) {
+			do {
 				sharlotka.Bake();
-			}
+			} while (!sharlotka.IsReady); 
 			sharlotka.TurnOut();
 			sharlotka.DustWithSugar();
 			sharlotka.DustWithCinnamon();

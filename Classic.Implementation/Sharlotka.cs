@@ -9,35 +9,35 @@
 		}
 
 		public void AddApples() {
-			_sharlotkaState.AddApples();
+			_sharlotkaState.AddApples(this);
 		}
 
 		public void AddBatter() {
-			_sharlotkaState.AddBatter();
+			_sharlotkaState.AddBatter(this);
 		}
 
 		public void Bake() {
-			_sharlotkaState.Bake();
+			_sharlotkaState.Bake(this);
 		}
 
 		public bool IsReady {
-			get { return _sharlotkaState.IsReady; }
+			get { return _sharlotkaState.GetIsReady(this); }
 		}
 
 		public void TurnOut() {
-			_sharlotkaState.TurnOut();
+			_sharlotkaState.TurnOut(this);
 		}
 
 		public void DustWithSugar() {
-			_sharlotkaState.DustWithSugar();
+			_sharlotkaState.DustWithSugar(this);
 		}
 
 		public void DustWithCinnamon() {
-			_sharlotkaState.DustWithCinnamon();
+			_sharlotkaState.DustWithCinnamon(this);
 		}
 
 		public void Serve() {
-			_sharlotkaState.Serve();
+			_sharlotkaState.Serve(this);
 		}
 
 		public ISharlotkaState State {

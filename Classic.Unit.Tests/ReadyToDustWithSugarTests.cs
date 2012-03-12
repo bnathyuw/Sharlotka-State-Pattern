@@ -16,54 +16,54 @@ namespace Classic.Unit.Tests
 		public void SetUp() {
 			_sharlotka = MockRepository.GenerateStub<IHasState<ISharlotkaState>>();
 			_successor = MockRepository.GenerateStub<ISharlotkaState>();
-			_state = new ReadyToDustWithSugarState(_sharlotka, _successor);
+			_state = new ReadyToDustWithSugarState(_successor);
 		}
 
 		[Test]
 		public void AddApples_throws_WrongStateException() {
-			Assert.Throws<WrongStateException>(() => _state.AddApples());
+			Assert.Throws<WrongStateException>(() => _state.AddApples(_sharlotka));
 		}
 
 		[Test]
 		public void AddBatter_throws_WrongStateException() {
-			Assert.Throws<WrongStateException>(() => _state.AddBatter());
+			Assert.Throws<WrongStateException>(() => _state.AddBatter(_sharlotka));
 		}
 
 		[Test]
 		public void Bake_throws_WrongStateException() {
-			Assert.Throws<WrongStateException>(() => _state.Bake());
+			Assert.Throws<WrongStateException>(() => _state.Bake(_sharlotka));
 		}
 
 		[Test]
 		public void IsReady_throws_WrongStateException() {
-			Assert.Throws<WrongStateException>(() => { var isReady = _state.IsReady; });
+			Assert.Throws<WrongStateException>(() => { var isReady = _state.GetIsReady(_sharlotka); });
 		}
 
 		[Test]
 		public void TurnOut_throws_WrongStateException() {
-			Assert.Throws<WrongStateException>(() => _state.TurnOut());
+			Assert.Throws<WrongStateException>(() => _state.TurnOut(_sharlotka));
 		}
 
 		[Test]
 		public void Can_call_DustWithSugar() {
-			_state.DustWithSugar();
+			_state.DustWithSugar(_sharlotka);
 		}
 
 		[Test]
 		public void DustWithSugar_sets_state_to_successor() {
-			_state.DustWithSugar();
+			_state.DustWithSugar(_sharlotka);
 
 			_sharlotka.AssertWasCalled(s => s.State = _successor);
 		}
 
 		[Test]
 		public void DustWithCinnamon_throws_WrongStateException() {
-			Assert.Throws<WrongStateException>(() => _state.DustWithCinnamon());
+			Assert.Throws<WrongStateException>(() => _state.DustWithCinnamon(_sharlotka));
 		}
 
 		[Test]
 		public void Serve_throws_WrongStateException() {
-			Assert.Throws<WrongStateException>(() => _state.Serve());
+			Assert.Throws<WrongStateException>(() => _state.Serve(_sharlotka));
 		}
 	}
 }

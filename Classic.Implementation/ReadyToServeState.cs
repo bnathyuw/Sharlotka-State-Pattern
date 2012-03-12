@@ -1,41 +1,35 @@
 namespace Classic.Implementation
 {
 	public class ReadyToServeState : ISharlotkaState {
-		private readonly IHasState<ISharlotkaState> _sharlotka;
-
-		public ReadyToServeState(IHasState<ISharlotkaState> sharlotka) {
-			_sharlotka = sharlotka;
-		}
-
-		public void AddApples() {
+		public void AddApples(IHasState<ISharlotkaState> sharlotka) {
 			throw new WrongStateException();
 		}
 
-		public void AddBatter() {
+		public void AddBatter(IHasState<ISharlotkaState> sharlotka) {
 			throw new WrongStateException();
 		}
 
-		public void Bake() {
+		public void Bake(IHasState<ISharlotkaState> sharlotka) {
 			throw new WrongStateException();
 		}
 
-		public bool IsReady {
-			get { throw new WrongStateException(); }
-		}
-
-		public void TurnOut() {
+		public bool GetIsReady(IHasState<ISharlotkaState> sharlotka) {
 			throw new WrongStateException();
 		}
 
-		public void DustWithSugar() {
+		public void TurnOut(IHasState<ISharlotkaState> sharlotka) {
 			throw new WrongStateException();
 		}
 
-		public void DustWithCinnamon() {
+		public void DustWithSugar(IHasState<ISharlotkaState> sharlotka) {
 			throw new WrongStateException();
 		}
 
-		public void Serve() {
+		public void DustWithCinnamon(IHasState<ISharlotkaState> sharlotka) {
+			throw new WrongStateException();
+		}
+
+		public void Serve(IHasState<ISharlotkaState> sharlotka) {
 			
 		}
 	}

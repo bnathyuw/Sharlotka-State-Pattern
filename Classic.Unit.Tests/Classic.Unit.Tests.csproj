@@ -48,7 +48,6 @@
     <Compile Include="ReadyToDustWithCinnamonTests.cs" />
     <Compile Include="ReadyToDustWithSugarTests.cs" />
     <Compile Include="ReadyToTurnOutTests.cs" />
-    <Compile Include="NotReadyToTurnOutTests.cs" />
     <Compile Include="ReadyToAddBatterStateTests.cs" />
     <Compile Include="ReadyToBakeStateTests.cs" />
     <Compile Include="ReadyToAddApplesStateTests.cs" />
