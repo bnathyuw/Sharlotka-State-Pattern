@@ -55,6 +55,8 @@
     <Compile Include="ReadyToServeState.cs" />
     <Compile Include="ReadyToTurnOutState.cs" />
     <Compile Include="Sharlotka.cs" />
+    <Compile Include="SharlotkaRegistry.cs" />
+    <Compile Include="SharlotkaStateRegistry.cs" />
     <Compile Include="WrongStateException.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
