@@ -8,7 +8,7 @@ namespace Classic.Acceptance.Tests
 	{
 		[Test]
 		public void Happy_path() {
-			var sharlotka = new Sharlotka();
+			var sharlotka = new Sharlotka(null);
 			sharlotka.AddApples();
 			sharlotka.AddBatter();
 			sharlotka.Bake();

@@ -2,36 +2,42 @@
 {
 	public class Sharlotka
 	{
+		private readonly ISharlotkaState _sharlotkaState;
+
+		public Sharlotka(ISharlotkaState sharlotkaState) {
+			_sharlotkaState = sharlotkaState;
+		}
+
 		public void AddApples() {
-			throw new System.NotImplementedException();
+			_sharlotkaState.AddApples();
 		}
 
 		public void AddBatter() {
-			throw new System.NotImplementedException();
+			_sharlotkaState.AddBatter();
 		}
 
 		public void Bake() {
-			throw new System.NotImplementedException();
+			_sharlotkaState.Bake();
 		}
 
 		public bool IsReady {
-			get { throw new System.NotImplementedException(); }
+			get { return _sharlotkaState.IsReady; }
 		}
 
 		public void TurnOut() {
-			throw new System.NotImplementedException();
+			_sharlotkaState.TurnOut();
 		}
 
 		public void DustWithSugar() {
-			throw new System.NotImplementedException();
+			_sharlotkaState.DustWithSugar();
 		}
 
 		public void DustWithCinnamon() {
-			throw new System.NotImplementedException();
+			_sharlotkaState.DustWithCinnamon();
 		}
 
 		public void Serve() {
-			throw new System.NotImplementedException();
+			_sharlotkaState.Serve();
 		}
 	}
 }
