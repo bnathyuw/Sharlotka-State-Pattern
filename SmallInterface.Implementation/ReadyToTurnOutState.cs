@@ -1,6 +1,6 @@
 namespace SmallInterface.Implementation
 {
-	public class ReadyToTurnOutState : ISharlotkaState, ICanTurnOut, ICanGetIsReady {
+	public class ReadyToTurnOutState : ICanTurnOut, ICanGetIsReady {
 		private readonly ISharlotkaState _successor;
 
 		public ReadyToTurnOutState(ISharlotkaState successor) {

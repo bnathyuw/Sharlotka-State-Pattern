@@ -53,31 +53,31 @@
 		}
 	}
 
-	public interface ICanServe {
+	public interface ICanServe : ISharlotkaState {
 		void Serve(IHasState<ISharlotkaState> sharlotka);
 	}
 
-	public interface ICanDustWithCinnamon {
+	public interface ICanDustWithCinnamon : ISharlotkaState {
 		void DustWithCinnamon(IHasState<ISharlotkaState> sharlotka);
 	}
 
-	public interface ICanDustWithSugar {
+	public interface ICanDustWithSugar : ISharlotkaState {
 		void DustWithSugar(IHasState<ISharlotkaState> sharlotka);
 	}
 
-	public interface ICanTurnOut {
+	public interface ICanTurnOut : ISharlotkaState {
 		void TurnOut(IHasState<ISharlotkaState> sharlotka);
 	}
 
-	public interface ICanGetIsReady {
+	public interface ICanGetIsReady : ISharlotkaState {
 		bool GetIsReady(IHasState<ISharlotkaState> sharlotka);
 	}
 
-	public interface ICanBake {
+	public interface ICanBake : ISharlotkaState {
 		void Bake(IHasState<ISharlotkaState> sharlotka);
 	}
 
-	public interface ICanAddBatter {
+	public interface ICanAddBatter : ISharlotkaState {
 		void AddBatter(IHasState<ISharlotkaState> sharlotka);
 	}
 }

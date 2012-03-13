@@ -1,6 +1,6 @@
 namespace SmallInterface.Implementation
 {
-	public class ReadyToAddBatterState : ISharlotkaState, ICanAddBatter {
+	public class ReadyToAddBatterState : ICanAddBatter {
 		private readonly ISharlotkaState _successor;
 
 		public ReadyToAddBatterState(ISharlotkaState successor) {

@@ -1,6 +1,6 @@
 namespace SmallInterface.Implementation
 {
-	public class ReadyToAddApplesState : ISharlotkaState, ICanAddApples {
+	public class ReadyToAddApplesState : ICanAddApples {
 		private readonly ISharlotkaState _successor;
 
 		public ReadyToAddApplesState(ISharlotkaState successor) {
@@ -12,7 +12,7 @@ namespace SmallInterface.Implementation
 		}
 	}
 
-	public interface ICanAddApples
+	public interface ICanAddApples : ISharlotkaState
 	{
 		void AddApples(IHasState<ISharlotkaState> sharlotka);
 	}

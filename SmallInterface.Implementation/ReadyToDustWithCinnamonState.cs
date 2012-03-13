@@ -1,6 +1,6 @@
 namespace SmallInterface.Implementation
 {
-	public class ReadyToDustWithCinnamonState : ISharlotkaState, ICanDustWithCinnamon {
+	public class ReadyToDustWithCinnamonState : ICanDustWithCinnamon {
 		private readonly ISharlotkaState _successor;
 
 		public ReadyToDustWithCinnamonState(ISharlotkaState successor) {

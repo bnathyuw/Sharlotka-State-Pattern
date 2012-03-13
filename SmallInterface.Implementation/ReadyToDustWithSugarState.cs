@@ -1,6 +1,6 @@
 namespace SmallInterface.Implementation
 {
-	public class ReadyToDustWithSugarState : ISharlotkaState, ICanDustWithSugar {
+	public class ReadyToDustWithSugarState : ICanDustWithSugar {
 		private readonly ISharlotkaState _successor;
 
 		public ReadyToDustWithSugarState(ISharlotkaState successor) {

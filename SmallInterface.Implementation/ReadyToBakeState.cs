@@ -1,6 +1,6 @@
 namespace SmallInterface.Implementation
 {
-	public class ReadyToBakeState : ISharlotkaState, ICanBake, ICanGetIsReady {
+	public class ReadyToBakeState : ICanBake, ICanGetIsReady {
 		private readonly ISharlotkaState _successor;
 		private int _bakeCount;
 		public ReadyToBakeState(ISharlotkaState successor) {
