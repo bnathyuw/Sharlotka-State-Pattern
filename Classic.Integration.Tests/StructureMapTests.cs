@@ -1,5 +1,4 @@
-﻿using Classic.Implementation;
-using Classic.Implementation.DependencyInjection;
+﻿using Classic.Implementation.DependencyInjection;
 using NUnit.Framework;
 
 namespace Classic.Integration.Tests

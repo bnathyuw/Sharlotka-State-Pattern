@@ -1,7 +1,7 @@
-﻿using NUnit.Framework;
-using SmallInterface.Implementation.DependencyInjection;
+﻿using Fluent.Implementation.DependencyInjection;
+using NUnit.Framework;
 
-namespace SmallInterface.Integration.Tests
+namespace Fluent.Integration.Tests
 {
 	[TestFixture]
 	public class StructureMapTests
