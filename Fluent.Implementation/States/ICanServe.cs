@@ -1,6 +1,6 @@
 namespace Fluent.Implementation.States
 {
-	public interface ICanServe : ISharlotkaState {
-		void Serve(IHasState<ISharlotkaState> sharlotka);
+	public interface ICanServe {
+		void Serve();
 	}
 }

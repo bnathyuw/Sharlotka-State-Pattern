@@ -13,7 +13,6 @@ namespace Fluent.Implementation.DependencyInjection
 
 		private static void Configure(ConfigurationExpression x) {
 			x.AddRegistry<SharlotkaRegistry>();
-			x.AddRegistry<SharlotkaStateRegistry>();
 		}
 	}
 }

@@ -1,7 +1,6 @@
 ﻿using Fluent.Implementation;
 using Fluent.Implementation.States;
 using NUnit.Framework;
-using Rhino.Mocks;
 
 namespace Fluent.Unit.Tests
 {
@@ -9,83 +8,73 @@ namespace Fluent.Unit.Tests
 	public class SharlotkaTests
 	{
 		[Test]
-		public void AddApples_calls_state() {
-			var sharlotkaState = MockRepository.GenerateStub<ICanAddApples>();
-			var sharlotka = new Sharlotka(sharlotkaState);
+		public void Explicit_AddApples_returns_self() {
+			var sharlotka = new Sharlotka() as ICanAddApples;
 
-			sharlotka.AddApples();
+			var canAddBatter = sharlotka.AddApples();
 
-			sharlotkaState.AssertWasCalled(ss => ss.AddApples(sharlotka));
+			Assert.That(canAddBatter, Is.EqualTo(sharlotka));
+		}
+		
+		[Test]
+		public void Implicity_AddApples_returns_self() {
+			var sharlotka = new Sharlotka();
+
+			var canAddBatter = sharlotka.AddApples();
+
+			Assert.That(canAddBatter, Is.EqualTo(sharlotka));
 		}
 
 		[Test]
-		public void AddBatter_calls_state() {
-			var sharlotkaState = MockRepository.GenerateStub<ICanAddBatter>();
-			var sharlotka = new Sharlotka(sharlotkaState);
-	
-			sharlotka.AddBatter();
+		public void AddBatter_returns_self() {
+			var sharlotka = new Sharlotka() as ICanAddBatter;
 
-			sharlotkaState.AssertWasCalled(ss => ss.AddBatter(sharlotka));
+			var canBake = sharlotka.AddBatter();
+
+			Assert.That(canBake, Is.EqualTo(sharlotka));
 		}
 
 		[Test]
-		public void Bake_calls_state() {
-			var sharlotkaState = MockRepository.GenerateStub<ICanBake>();
-			var sharlotka = new Sharlotka(sharlotkaState);
-			
-			sharlotka.Bake();
+		public void Bake_returns_self_after_five_attempts() {
+			var sharlotka = new Sharlotka() as ICanBake;
 
-			sharlotkaState.AssertWasCalled(ss => ss.Bake(sharlotka));
+			var canTurnOut = sharlotka.Bake();
+			Assert.That(canTurnOut, Is.Null);
+			canTurnOut = sharlotka.Bake();
+			Assert.That(canTurnOut, Is.Null);
+			canTurnOut = sharlotka.Bake();
+			Assert.That(canTurnOut, Is.Null);
+			canTurnOut = sharlotka.Bake();
+			Assert.That(canTurnOut, Is.Null);
+			canTurnOut = sharlotka.Bake();
+			Assert.That(canTurnOut, Is.EqualTo(sharlotka));
 		}
 
 		[Test]
-		public void IsReady_calls_state() {
-			var sharlotkaState = MockRepository.GenerateStub<ICanGetIsReady>();
-			var sharlotka = new Sharlotka(sharlotkaState);
+		public void TurnOut_returns_self() {
+			var sharlotka = new Sharlotka() as ICanTurnOut;
 
-			sharlotka.GetIsReady();
+			var canDustWithSugar = sharlotka.TurnOut();
 
-			sharlotkaState.AssertWasCalled(ss => ss.GetIsReady(sharlotka));
+			Assert.That(canDustWithSugar, Is.EqualTo(sharlotka));
 		}
 
 		[Test]
-		public void TurnOut_calls_state() {
-			var sharlotkaState = MockRepository.GenerateStub<ICanTurnOut>();
-			var sharlotka = new Sharlotka(sharlotkaState);
+		public void DustWithSugar_returns_self() {
+			var sharlotka = new Sharlotka() as ICanDustWithSugar;
 
-			sharlotka.TurnOut();
+			var canDustWithCinnamon = sharlotka.DustWithSugar();
 
-			sharlotkaState.AssertWasCalled(ss => ss.TurnOut(sharlotka));
+			Assert.That(canDustWithCinnamon, Is.EqualTo(sharlotka));
 		}
 
 		[Test]
-		public void DustWithSugar_calls_state() {
-			var sharlotkaState = MockRepository.GenerateStub<ICanDustWithSugar>();
-			var sharlotka = new Sharlotka(sharlotkaState);
+		public void DustWithCinnamon_returns_self() {
+			var sharlotka = new Sharlotka() as ICanDustWithCinnamon;
 
-			sharlotka.DustWithSugar();
+			var canServe = sharlotka.DustWithCinnamon();
 
-			sharlotkaState.AssertWasCalled(ss => ss.DustWithSugar(sharlotka));
+			Assert.That(canServe, Is.EqualTo(sharlotka));
 		}
-
-		[Test]
-		public void DustWithCinnamon_calls_state() {
-			var sharlotkaState = MockRepository.GenerateStub<ICanDustWithCinnamon>();
-			var sharlotka = new Sharlotka(sharlotkaState);
-
-			sharlotka.DustWithCinnamon();
-
-			sharlotkaState.AssertWasCalled(ss => ss.DustWithCinnamon(sharlotka));
-		}
-
-		[Test]
-		public void Serve_calls_state() {
-			var sharlotkaState = MockRepository.GenerateStub<ICanServe>();
-			var sharlotka = new Sharlotka(sharlotkaState);
-
-			sharlotka.Serve();
-
-			sharlotkaState.AssertWasCalled(ss => ss.Serve(sharlotka));
-		}	 
 	}
 }
