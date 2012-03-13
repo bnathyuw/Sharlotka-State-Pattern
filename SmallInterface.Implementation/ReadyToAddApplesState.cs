@@ -11,9 +11,4 @@ namespace SmallInterface.Implementation
 			sharlotka.State = _successor;
 		}
 	}
-
-	public interface ICanAddApples : ISharlotkaState
-	{
-		void AddApples(IHasState<ISharlotkaState> sharlotka);
-	}
 }
