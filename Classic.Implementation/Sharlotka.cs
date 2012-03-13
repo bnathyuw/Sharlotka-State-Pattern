@@ -1,4 +1,6 @@
-﻿namespace Classic.Implementation
+﻿using Classic.Implementation.States;
+
+namespace Classic.Implementation
 {
 	public class Sharlotka : IHasState<ISharlotkaState>
 	{

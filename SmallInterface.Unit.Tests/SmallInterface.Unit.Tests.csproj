@@ -42,13 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReadyToAddApplesStateTests.cs" />
-    <Compile Include="ReadyToAddBatterStateTests.cs" />
-    <Compile Include="ReadyToBakeStateTests.cs" />
-    <Compile Include="ReadyToDustWithCinnamonTests.cs" />
-    <Compile Include="ReadyToDustWithSugarTests.cs" />
-    <Compile Include="ReadyToServeTests.cs" />
-    <Compile Include="ReadyToTurnOutTests.cs" />
+    <Compile Include="States\ReadyToAddApplesStateTests.cs" />
+    <Compile Include="States\ReadyToAddBatterStateTests.cs" />
+    <Compile Include="States\ReadyToBakeStateTests.cs" />
+    <Compile Include="States\ReadyToDustWithCinnamonTests.cs" />
+    <Compile Include="States\ReadyToDustWithSugarTests.cs" />
+    <Compile Include="States\ReadyToServeTests.cs" />
+    <Compile Include="States\ReadyToTurnOutTests.cs" />
     <Compile Include="SharlotkaTests.cs" />
   </ItemGroup>
   <ItemGroup>

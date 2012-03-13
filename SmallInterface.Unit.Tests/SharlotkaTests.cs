@@ -1,6 +1,7 @@
 ﻿using SmallInterface.Implementation;
 using NUnit.Framework;
 using Rhino.Mocks;
+using SmallInterface.Implementation.States;
 
 namespace SmallInterface.Unit.Tests
 {

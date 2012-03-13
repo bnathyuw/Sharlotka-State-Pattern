@@ -38,29 +38,28 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DependencyResolver.cs" />
-    <Compile Include="ICanAddApples.cs" />
-    <Compile Include="ICanAddBatter.cs" />
-    <Compile Include="ICanBake.cs" />
-    <Compile Include="ICanDustWithCinnamon.cs" />
-    <Compile Include="ICanDustWithSugar.cs" />
-    <Compile Include="ICanGetIsReady.cs" />
-    <Compile Include="ICanServe.cs" />
-    <Compile Include="ICanTurnOut.cs" />
-    <Compile Include="IHasState.cs" />
-    <Compile Include="ISharlotkaState.cs" />
+    <Compile Include="DependencyInjection\DependencyResolver.cs" />
+    <Compile Include="States\ICanAddApples.cs" />
+    <Compile Include="States\ICanAddBatter.cs" />
+    <Compile Include="States\ICanBake.cs" />
+    <Compile Include="States\ICanDustWithCinnamon.cs" />
+    <Compile Include="States\ICanDustWithSugar.cs" />
+    <Compile Include="States\ICanGetIsReady.cs" />
+    <Compile Include="States\ICanServe.cs" />
+    <Compile Include="States\ICanTurnOut.cs" />
+    <Compile Include="States\IHasState.cs" />
+    <Compile Include="States\ISharlotkaState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReadyToAddApplesState.cs" />
-    <Compile Include="ReadyToAddBatterState.cs" />
-    <Compile Include="ReadyToBakeState.cs" />
-    <Compile Include="ReadyToDustWithCinnamonState.cs" />
-    <Compile Include="ReadyToDustWithSugarState.cs" />
-    <Compile Include="ReadyToServeState.cs" />
-    <Compile Include="ReadyToTurnOutState.cs" />
+    <Compile Include="States\ReadyToAddApplesState.cs" />
+    <Compile Include="States\ReadyToAddBatterState.cs" />
+    <Compile Include="States\ReadyToBakeState.cs" />
+    <Compile Include="States\ReadyToDustWithCinnamonState.cs" />
+    <Compile Include="States\ReadyToDustWithSugarState.cs" />
+    <Compile Include="States\ReadyToServeState.cs" />
+    <Compile Include="States\ReadyToTurnOutState.cs" />
     <Compile Include="Sharlotka.cs" />
-    <Compile Include="SharlotkaRegistry.cs" />
-    <Compile Include="SharlotkaStateRegistry.cs" />
-    <Compile Include="WrongStateException.cs" />
+    <Compile Include="DependencyInjection\SharlotkaRegistry.cs" />
+    <Compile Include="DependencyInjection\SharlotkaStateRegistry.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

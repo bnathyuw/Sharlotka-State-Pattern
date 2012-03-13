@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using SmallInterface.Implementation;
+using SmallInterface.Implementation.DependencyInjection;
 
 namespace SmallInterface.AcceptanceTests
 {

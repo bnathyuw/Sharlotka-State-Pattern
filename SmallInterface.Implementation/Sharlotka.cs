@@ -1,4 +1,6 @@
-﻿namespace SmallInterface.Implementation
+﻿using SmallInterface.Implementation.States;
+
+namespace SmallInterface.Implementation
 {
 	public class Sharlotka : IHasState<ISharlotkaState>
 	{

@@ -1,4 +1,5 @@
 ﻿using Classic.Implementation;
+using Classic.Implementation.DependencyInjection;
 using NUnit.Framework;
 
 namespace Classic.Acceptance.Tests
