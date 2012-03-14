@@ -1,29 +1,35 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classic.Implementation", "Classic.Implementation\Classic.Implementation.csproj", "{5D9D182D-AB7A-43C1-8F81-AF2BDBF42E3E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classic.Implementation", "Classic\Classic.Implementation\Classic.Implementation.csproj", "{5D9D182D-AB7A-43C1-8F81-AF2BDBF42E3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classic.Unit.Tests", "Classic.Unit.Tests\Classic.Unit.Tests.csproj", "{D197A62B-0473-4847-A4D3-583A7630D4AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classic.Unit.Tests", "Classic\Classic.Unit.Tests\Classic.Unit.Tests.csproj", "{D197A62B-0473-4847-A4D3-583A7630D4AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classic.Integration.Tests", "Classic.Integration.Tests\Classic.Integration.Tests.csproj", "{2CC33081-15E0-4D61-BB6D-7061BAAE58D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classic.Integration.Tests", "Classic\Classic.Integration.Tests\Classic.Integration.Tests.csproj", "{2CC33081-15E0-4D61-BB6D-7061BAAE58D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classic.Acceptance.Tests", "Classic.Acceptance.Tests\Classic.Acceptance.Tests.csproj", "{949F1E59-DFC5-40BA-9A5E-ABAD176C9244}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classic.Acceptance.Tests", "Classic\Classic.Acceptance.Tests\Classic.Acceptance.Tests.csproj", "{949F1E59-DFC5-40BA-9A5E-ABAD176C9244}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallInterface.Implementation", "SmallInterface.Implementation\SmallInterface.Implementation.csproj", "{555F6263-C64B-430D-A801-3A6A1259E9AA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallInterface.Implementation", "SmallInterface\SmallInterface.Implementation\SmallInterface.Implementation.csproj", "{555F6263-C64B-430D-A801-3A6A1259E9AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallInterface.AcceptanceTests", "SmallInterface.AcceptanceTests\SmallInterface.AcceptanceTests.csproj", "{923A75EB-0D87-48F9-BA95-2731D852BDD0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallInterface.AcceptanceTests", "SmallInterface\SmallInterface.AcceptanceTests\SmallInterface.AcceptanceTests.csproj", "{923A75EB-0D87-48F9-BA95-2731D852BDD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallInterface.Unit.Tests", "SmallInterface.Unit.Tests\SmallInterface.Unit.Tests.csproj", "{0CD45469-A471-4619-BF27-0FB5FA0BF155}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallInterface.Unit.Tests", "SmallInterface\SmallInterface.Unit.Tests\SmallInterface.Unit.Tests.csproj", "{0CD45469-A471-4619-BF27-0FB5FA0BF155}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallInterface.Integration.Tests", "SmallInterface.Integration.Tests\SmallInterface.Integration.Tests.csproj", "{E7102006-70AA-444D-B546-C0A0945AA97C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallInterface.Integration.Tests", "SmallInterface\SmallInterface.Integration.Tests\SmallInterface.Integration.Tests.csproj", "{E7102006-70AA-444D-B546-C0A0945AA97C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fluent.Implementation", "Fluent.Implementation\Fluent.Implementation.csproj", "{7F878CF7-3E14-4B29-95B0-74367E6227DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fluent.Implementation", "Fluent\Fluent.Implementation\Fluent.Implementation.csproj", "{7F878CF7-3E14-4B29-95B0-74367E6227DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fluent.Acceptance.Tests", "Fluent.Acceptance.Tests\Fluent.Acceptance.Tests.csproj", "{251F4716-8732-4992-BF02-E48AEB113190}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fluent.Acceptance.Tests", "Fluent\Fluent.Acceptance.Tests\Fluent.Acceptance.Tests.csproj", "{251F4716-8732-4992-BF02-E48AEB113190}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fluent.Integration.Tests", "Fluent.Integration.Tests\Fluent.Integration.Tests.csproj", "{0AEC7AF6-94ED-47B4-BE16-E2030235E2DA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fluent.Integration.Tests", "Fluent\Fluent.Integration.Tests\Fluent.Integration.Tests.csproj", "{0AEC7AF6-94ED-47B4-BE16-E2030235E2DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fluent.Unit.Tests", "Fluent.Unit.Tests\Fluent.Unit.Tests.csproj", "{EB5BB995-9366-4CAA-ACD9-A8B6111FA5C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fluent.Unit.Tests", "Fluent\Fluent.Unit.Tests\Fluent.Unit.Tests.csproj", "{EB5BB995-9366-4CAA-ACD9-A8B6111FA5C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Classic", "Classic", "{4BA08B79-E170-44D6-8484-A9E5FB854A79}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fluent", "Fluent", "{E97FE251-A2A6-4D49-896E-2A30CA2DAF04}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SmallInterface", "SmallInterface", "{76754F6E-2E92-4468-AC41-1CB8EF223998}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -82,5 +88,19 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{949F1E59-DFC5-40BA-9A5E-ABAD176C9244} = {4BA08B79-E170-44D6-8484-A9E5FB854A79}
+		{D197A62B-0473-4847-A4D3-583A7630D4AF} = {4BA08B79-E170-44D6-8484-A9E5FB854A79}
+		{5D9D182D-AB7A-43C1-8F81-AF2BDBF42E3E} = {4BA08B79-E170-44D6-8484-A9E5FB854A79}
+		{2CC33081-15E0-4D61-BB6D-7061BAAE58D1} = {4BA08B79-E170-44D6-8484-A9E5FB854A79}
+		{251F4716-8732-4992-BF02-E48AEB113190} = {E97FE251-A2A6-4D49-896E-2A30CA2DAF04}
+		{EB5BB995-9366-4CAA-ACD9-A8B6111FA5C8} = {E97FE251-A2A6-4D49-896E-2A30CA2DAF04}
+		{7F878CF7-3E14-4B29-95B0-74367E6227DC} = {E97FE251-A2A6-4D49-896E-2A30CA2DAF04}
+		{0AEC7AF6-94ED-47B4-BE16-E2030235E2DA} = {E97FE251-A2A6-4D49-896E-2A30CA2DAF04}
+		{923A75EB-0D87-48F9-BA95-2731D852BDD0} = {76754F6E-2E92-4468-AC41-1CB8EF223998}
+		{0CD45469-A471-4619-BF27-0FB5FA0BF155} = {76754F6E-2E92-4468-AC41-1CB8EF223998}
+		{555F6263-C64B-430D-A801-3A6A1259E9AA} = {76754F6E-2E92-4468-AC41-1CB8EF223998}
+		{E7102006-70AA-444D-B546-C0A0945AA97C} = {76754F6E-2E92-4468-AC41-1CB8EF223998}
 	EndGlobalSection
 EndGlobal
