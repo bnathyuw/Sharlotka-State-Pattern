@@ -2,7 +2,7 @@
 
 Exploring the State Pattern through the medium of cake!
 
-There are currently three implementation:
+There are currently three implementations:
 
 ## Classic
 
