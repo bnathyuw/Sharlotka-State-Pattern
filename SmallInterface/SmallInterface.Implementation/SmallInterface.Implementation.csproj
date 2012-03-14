@@ -61,6 +61,7 @@
     <Compile Include="Sharlotka.cs" />
     <Compile Include="DependencyInjection\SharlotkaRegistry.cs" />
     <Compile Include="DependencyInjection\SharlotkaStateRegistry.cs" />
+    <Compile Include="States\WrongStateException.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,16 +1,25 @@
 ﻿using NUnit.Framework;
 using SmallInterface.Implementation;
 using SmallInterface.Implementation.DependencyInjection;
+using SmallInterface.Implementation.States;
+using StructureMap;
 
 namespace SmallInterface.AcceptanceTests
 {
 	[TestFixture]
 	public class Tests
 	{
+		private IContainer _container;
+
+		[SetUp]
+		public void SetUp() {
+			_container = DependencyResolver.Container;
+		}
+
 		[Test]
 		public void Happy_path() {
-			var container = DependencyResolver.Container;
-			var sharlotka = container.GetInstance<ISharlotka>();
+			var sharlotka = _container.GetInstance<ISharlotka>();
+
 			sharlotka.AddApples();
 			sharlotka.AddBatter();
 			do {
@@ -20,6 +29,27 @@ namespace SmallInterface.AcceptanceTests
 			sharlotka.DustWithSugar();
 			sharlotka.DustWithCinnamon();
 			sharlotka.Serve();
+		}
+
+		[Test]
+		public void Throws_WrongStateException_if_methods_are_called_out_of_turn() {
+			var sharlotka = _container.GetInstance<ISharlotka>();
+
+			Assert.Throws<WrongStateException>(sharlotka.AddBatter);
+			Assert.Throws<WrongStateException>(sharlotka.Bake);
+			Assert.Throws<WrongStateException>(() => sharlotka.GetIsReady());
+			Assert.Throws<WrongStateException>(sharlotka.TurnOut);
+			Assert.Throws<WrongStateException>(sharlotka.DustWithSugar);
+			Assert.Throws<WrongStateException>(sharlotka.DustWithCinnamon);
+
+			sharlotka.AddApples();
+
+			Assert.Throws<WrongStateException>(sharlotka.AddApples);
+			Assert.Throws<WrongStateException>(sharlotka.Bake);
+			Assert.Throws<WrongStateException>(() => sharlotka.GetIsReady());
+			Assert.Throws<WrongStateException>(sharlotka.TurnOut);
+			Assert.Throws<WrongStateException>(sharlotka.DustWithSugar);
+			Assert.Throws<WrongStateException>(sharlotka.DustWithCinnamon);
 		}
 	}
 }
