@@ -9,7 +9,7 @@ namespace Fluent.Unit.Tests
 	{
 		[Test]
 		public void Explicit_AddApples_returns_self() {
-			var sharlotka = new Sharlotka() as ICanAddApples;
+			var sharlotka = new Sharlotka() as ISharlotka;
 
 			var canAddBatter = sharlotka.AddApples();
 

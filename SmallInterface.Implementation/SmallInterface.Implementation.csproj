@@ -39,6 +39,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DependencyInjection\DependencyResolver.cs" />
+    <Compile Include="ISharlotka.cs" />
     <Compile Include="States\ICanAddApples.cs" />
     <Compile Include="States\ICanAddBatter.cs" />
     <Compile Include="States\ICanBake.cs" />

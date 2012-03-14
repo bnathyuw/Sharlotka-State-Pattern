@@ -1,6 +1,6 @@
 namespace Fluent.Implementation.States
 {
-	public interface ICanAddApples
+	public interface ISharlotka
 	{
 		ICanAddBatter AddApples();
 	}

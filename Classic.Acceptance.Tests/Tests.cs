@@ -10,7 +10,7 @@ namespace Classic.Acceptance.Tests
 		[Test]
 		public void Happy_path() {
 			var container = DependencyResolver.Container;
-			var sharlotka = container.GetInstance<Sharlotka>();
+			var sharlotka = container.GetInstance<ISharlotka>();
 			sharlotka.AddApples();
 			sharlotka.AddBatter();
 			do {

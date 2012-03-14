@@ -2,7 +2,7 @@
 
 namespace SmallInterface.Implementation
 {
-	public class Sharlotka : IHasState<ISharlotkaState>
+	internal class Sharlotka : IHasState<ISharlotkaState>, ISharlotka
 	{
 		private ISharlotkaState _sharlotkaState;
 

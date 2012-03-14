@@ -42,7 +42,7 @@
     <Compile Include="DependencyInjection\SharlotkaRegistry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sharlotka.cs" />
-    <Compile Include="States\ICanAddApples.cs" />
+    <Compile Include="States\ISharlotka.cs" />
     <Compile Include="States\ICanAddBatter.cs" />
     <Compile Include="States\ICanBake.cs" />
     <Compile Include="States\ICanDustWithCinnamon.cs" />

@@ -2,7 +2,7 @@
 
 namespace Fluent.Implementation
 {
-	public class Sharlotka : ICanAddApples, ICanAddBatter, ICanBake, ICanTurnOut, ICanDustWithSugar, ICanDustWithCinnamon, ICanServe
+	internal class Sharlotka : ISharlotka, ICanAddBatter, ICanBake, ICanTurnOut, ICanDustWithSugar, ICanDustWithCinnamon, ICanServe
 	{
 		private int _bakeCount;
 

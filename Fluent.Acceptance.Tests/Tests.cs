@@ -1,5 +1,4 @@
-﻿using Fluent.Implementation;
-using Fluent.Implementation.DependencyInjection;
+﻿using Fluent.Implementation.DependencyInjection;
 using Fluent.Implementation.States;
 using NUnit.Framework;
 
@@ -11,7 +10,7 @@ namespace Fluent.Acceptance.Tests
 		[Test]
 		public void Happy_path() {
 			var container = DependencyResolver.Container;
-			var sharlotka = container.GetInstance<Sharlotka>();
+			var sharlotka = container.GetInstance<ISharlotka>();
 			var canBake = sharlotka
 				.AddApples()
 				.AddBatter();
